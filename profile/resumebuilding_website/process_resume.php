@@ -33,7 +33,7 @@ $_SESSION['profile_pic'] = $_FILES['profile_pic'];
       $_SESSION["picturePath"] = $uploadDir . $fileName;
       
       // Redirect to the next page to display the image
-      
+      header("Location: resume.php");
       exit;
     } else {
       echo "Error uploading file.";
@@ -106,13 +106,13 @@ $_SESSION['profile_pic'] = $_FILES['profile_pic'];
 <body>
 	<div class="resume">
 		<div class="profile">
-			<img class="profile-image" src="<?=$picturePath?>" alt="Profile Picture">
+			<img class="profile-image" src="<?=$_SESSION['picturepath']?>" alt="Profile Picture">
 			<div class="profile-details">
 				<div class="name"><?=$_SESSION['name']?></div>
 				<div class="contact-info">
-					<div>Email: <?=$email?></div>
-					<div>Phone: <?=$phone?></div>
-					<div>Address: <?=$address?></div>
+					<div>Email: <?=$_SESSION['email']?></div>
+					<div>Phone: <?=$_SESSION['phone']?></div>
+					<div>Address: <?=$_SESSION['address']?></div>
 				</div>
 			</div>
 		</div>
@@ -120,7 +120,7 @@ $_SESSION['profile_pic'] = $_FILES['profile_pic'];
 		<div class="section">
 			<div class="section-title">Summary</div>
 			<div class="section-content">
-				<?=$summary?>
+				<?=$_SESSION['summary']?>
 			</div>
 		</div>
 
@@ -146,7 +146,7 @@ $_SESSION['profile_pic'] = $_FILES['profile_pic'];
 			<div class="section-content">
 				<div class="education">
 				<div class="education-entry">
-					<div class="education-degree"><?=$education?></div>
+					<div class="education-degree"><?=$_SESSION['education']?></div>
 					<!-- <div class="education-school">School Name</div>
 					<div class="education-dates">Dates Attended</div> -->
 				</div>
