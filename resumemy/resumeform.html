@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Resume Builder Form</title>
+    <link rel="stylesheet" type="text/css" href="form.css">
+</head>
+
+<body>
+    <h1>Build Your Personal Portfolio</h1>
+    <form action="submitdata.php" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            
+            <label for="fullname">Address</label>
+            <input type="text" id="fullname" name="Address" placeholder="Enter your Address" required>
+            <label for="fullname">Date of Bird</label>
+            <input type="date" id="fullname" name="dob" placeholder="Enter your Date of Birth" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Education</legend>
+            <label for="degree">Degree:</label>
+            <input type="text" id="degree" name="degree" placeholder="Enter your degree" required>
+
+            <label for="major">Major:</label>
+            <input type="text" id="major" name="major" placeholder="Enter your major" required>
+
+            <label for="school">School:</label>
+            <input type="text" id="school" name="school" placeholder="Enter your school name" required>
+
+            <label for="graduation">Graduation Date:</label>
+            <input type="date" id="graduation" name="graduation" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Work Experience</legend>
+            <label for="position1">Position 1:</label>
+            <input type="text" id="position1" name="position1" placeholder="Enter your position title" required>
+
+            <label for="company1">Company 1:</label>
+            <input type="text" id="company1" name="company1" placeholder="Enter your company name" required>
+
+            <label for="startDate1">Start Date:</label>
+            <input type="date" id="startDate1" name="startDate1" required>
+
+            <label for="endDate1">End Date:</label>
+            <input type="date" id="endDate1" name="endDate1" required>
+
+            <label for="responsibilities1">Responsibilities:</label>
+            <textarea id="responsibilities1" name="responsibilities1" rows="4" cols="50"
+                placeholder="Enter your responsibilities" required></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Skills</legend>
+            <label for="skill1">Skill 1:</label>
+            <input type="text" id="skill1" name="skill1" placeholder="Enter your skill" required>
+
+            <label for="skill2">Skill 2:</label>
+            <input type="text" id="skill2" name="skill2" placeholder="Enter your skill" required>
+
+            <label for="skill3">Skill 3:</label>
+            <input type="text" id="skill3" name="skill3" placeholder="Enter your skill" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Interests</legend>
+            <label for="interests">Interests:</label>
+            <textarea id="interests" name="interests" rows="4" cols="50" placeholder="Enter your interests"
+                required></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Choos Photo</legend>
+            <label for="choose Your Photo">Choos Your Profile Photo</label>
+                <input type="file" name="Photo">
+        </fieldset>
+        <fieldset>
+            <label for="Submit">Submit:</label>
+            <input type="submit">
+        </fieldset>
+       
+    </form>
+
+</body>
+
+</html>

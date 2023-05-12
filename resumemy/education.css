@@ -1,0 +1,88 @@
+/* Reset the default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the header */
+  header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  /* Style the logo */
+  header h1 {
+    font-size: 2em;
+    margin: 0;
+  }
+  
+  /* Style the navigation menu */
+  nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  nav li {
+    margin-right: 10px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  nav a:hover {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  /* Style the main content */
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Style the section headings */
+  section h2 {
+    margin-top: 20px;
+    font-size: 1.5em;
+  }
+  
+  /* Style the program list */
+  ul ul {
+    list-style: disc;
+    margin-left: 20px;
+  }
+  
+  /* Style the apply button */
+  section#admissions a {
+    display: block;
+    width: 200px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 5px;
+  }
+  
+  section#admissions a:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Style the footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  
