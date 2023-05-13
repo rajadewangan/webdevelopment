@@ -1,0 +1,13 @@
+body {
+	padding: 2vw;
+	background: aliceblue;
+}
+#resmessage {
+	background-color: red;
+	text-align: center;
+	margin: 1vw;
+	padding: 1vw;
+	width: 90%;
+	line-height: 10px;
+	font-size: bold;
+}
