@@ -1,0 +1,120 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+   
+}
+body{
+    font-family: 'Balthazar', serif;
+}
+/* main styling */
+#main{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+/* Header styling */
+#header{
+    height: 18vh;
+    width: 90vw;
+    display: flex;
+    background-color: aliceblue;
+}
+#leftlogo{
+width: 25%;
+}
+#leftlogo img,#rightlogo img{
+    height: 100%;
+    width: 81%;
+}
+#title{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#title h1{
+    text-shadow: 1px 3px 10px black;
+    color: lavenderblush;
+    line-height: 100%;
+}
+#title h3{
+    letter-spacing: 2px;
+}
+#rightlogo{
+width: 25%;
+}
+/* footer style */
+#footer{
+    height: 10vh;
+    background-color: beige;
+    display: flex;
+    width: 90vw;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+#footer h3{
+
+}
+/* container style  */
+#container{
+    margin: .5rem;
+    width: 90vw;
+    height: 72vh;
+
+}
+#container form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+#container form input{
+width: 100%;
+height: 2rem;
+}
+#myForm{
+    padding:1rem;
+    background-color: bisque;
+
+}
+
+#submit{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+#submit input{
+    margin-left: 1rem;
+    margin-top: 0.3rem;
+    padding: 0.2rem;
+    border-radius: 10px;
+    letter-spacing: .1em;
+    color: black;
+    background-color: greenyellow;
+}
+/* index page login logout  */
+#login_logout{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+#login_logout a{
+    text-decoration: none;
+}
