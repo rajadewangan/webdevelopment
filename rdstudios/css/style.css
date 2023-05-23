@@ -149,3 +149,13 @@ form input{
 #resmsg{
   
 }
+
+#categoryContainer{
+    display: flex;
+}
+.category{
+    padding: .3rem;
+    display: flex;
+    border: 1px solid black;
+    border-radius: 10px;
+}
