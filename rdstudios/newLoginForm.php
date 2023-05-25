@@ -20,7 +20,7 @@ require_once("header.php");
      echo("</div>");
    }
   ?>
-<form method="post" action="checkLogin.php">
+<form method="post" action="newCheckLogin.php">
 <label>Enter your user name</label>
 <input type="text" name="txtUser" />
 <label>Enter your password</label>

@@ -44,6 +44,11 @@ require_once("header.php");
       <span class="input-group-text" id="basic-addon1">%</span>
 </div>
 
+<div class="input-group-prepend">
+    <span class="input-group-text">Enter Description</span>
+  </div>
+  <textarea name="txtAdes" class="form-control" aria-label="With textarea"></textarea>
+
    <label class="input-group-text" for="inputGroupFile02">Choose Item Image</label>
    <input type="file" class="form-control" id="inputGroupFile02" name="flImage">
  

@@ -12,15 +12,7 @@ else{
     if($User['user_pass']==$b)
     {
         $_SESSION['uname']=$a;
-       if($User['user_type']=="user")
-       {
-        header("location:index.php");
-       }
-       else if($User['user_type']=="admin")
-       {
-        header("location:adminChoice.php");
-
-       }
+       header("location:quantityFormForCart.php");
     }
     else{
         header("location:loginForm.php?rsmsg=2");

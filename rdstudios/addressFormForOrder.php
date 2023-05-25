@@ -1,10 +1,10 @@
-<?php
-require_once("header.php");
-?>
-
-<div id="container">
-<div id="myForm">
 <?php 
+  include("header.php");
+?>
+<div id="container"> 
+
+<div id="myForm">
+  <?php 
    if(isset($_REQUEST['resmsg']))
    {
      echo("<div id='resmessage'>");
@@ -20,12 +20,12 @@ require_once("header.php");
      echo("</div>");
    }
   ?>
-<form method="post" action="checkLogin.php">
-<label>Enter your user name</label>
-<input type="text" name="txtUser" />
-<label>Enter your password</label>
-<input type="password" name="txtPassword" />
-<div id='formButtons' style="display:flex;">
+<form method="get" action="insertOrder.php">
+<label>Total Amount </label>
+<input type="text" name='txtAmount' value=<?=$_REQUEST['amnt']?> readonly>
+<label>Enter Shipping Address</label>
+<textarea rows='5' name="txtAddress" ></textarea>
+<div id='formButtons'>
 <input type="submit" value="Ok" />
 <input type="reset" value="Cancel" />
 </div>
@@ -34,6 +34,7 @@ require_once("header.php");
 
 </div><!--end of myForm-->
 </div><!--end of container--> 
-<?php
-require_once("footer.php");
+
+<?php 
+  include("footer.php");
 ?>

@@ -1,8 +1,8 @@
 <ul id="adminMenu" class="list-group">
   <li class="list-group-item"><a href="categoryForm.php"> Create Category</a></li>
   <li class="list-group-item"><a href="itemForm.php">Create Item</a></li>
-  <li class="list-group-item"><a href="">Create News</a></li>
-  <li class="list-group-item"><a href="">Create Offers</a></li>
+  <li class="list-group-item"><a href="newsForm.php">Create News</a></li>
+  <li class="list-group-item"><a href="offerForm.php">Create Offers</a></li>
   <li class="list-group-item"><a href=""> Inbox</a></li>
   <li class="list-group-item"><a href=""> Compose </a></li>
   <li class="list-group-item disabled" aria-disabled="true">Reports</li>

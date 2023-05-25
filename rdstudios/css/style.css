@@ -69,7 +69,8 @@ width: 25%;
     margin: .5rem;
     width: 90vw;
     height: fit-content;
-
+    display: flex;
+    flex-direction: column;
 }
 #container form{
     display: flex;
@@ -81,7 +82,7 @@ width: 25%;
     font-size: 1rem;
     line-height: 2rem;
 }
-#container form input,select{
+#container form input,#container form select,#container form textarea{
 width: 100%;
 height: 2rem;
 margin: 0.4rem 0px;
@@ -117,6 +118,14 @@ form input{
     justify-content: flex-end;
     align-items: stretch;
 }
+#formButtons{
+    display: flex;
+    
+}
+#formButtons input{
+    line-height: .5rem;
+    margin: 0.5rem;
+}
 #login_logout a{
     text-decoration: none;
 }
@@ -150,12 +159,96 @@ form input{
   
 }
 
+
 #categoryContainer{
     display: flex;
+    background-color: ghostwhite;
 }
 .category{
     padding: .3rem;
-    display: flex;
     border: 1px solid black;
     border-radius: 10px;
+    background-color: seashell;
+}
+.category a{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    
+}#itemContainer{
+    display: flex;
+    background-color: ghostwhite;
+    padding: 1.2rem;
+}
+.item{
+    padding: 0.3rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: seashell;
+    width: 22vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 55vh;
+}
+.item a {
+ 
+    background-color: lightgoldenrodyellow;
+    text-shadow: 2px 2px 5px black;
+    /* margin: 0.2rem; */
+    text-decoration: none;
+    color: #f4ff00;
+    padding: 0.3rem;
+    border: 1px solid black;
+    border-radius: 18px;
+    width: 9rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+.item div{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+#loginUserInfo h2{
+    font-size: 1rem;
+    background-color: #f5ffeb;
+}
+#displayCartInfoTable{
+    margin: 0.5rem auto;
+    border: 2px solid black;
+}
+#displayCartInfoTable tr{
+    border: 2px solid black;
+}
+#displayCartInfoTable td{
+    border: 1px solid black;
+    width: fit-content;
+    padding: 0.5rem;
+    text-align: center;
+}
+#displayCartInfoTable th{
+    text-align: center;
+    background-color: blanchedalmond;
+    padding: 0.5rem;
+}
+#displayCartInfoTable tbody{
+
+}
+#placeOrder{
+    text-align: center;
+    text-decoration: none;
+    background: gold;
+    border: 2px solid black;
+    border-radius: 7px 3px 7px;
+    padding: 0.5rem;
 }
