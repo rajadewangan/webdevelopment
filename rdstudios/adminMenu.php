@@ -6,10 +6,10 @@
   <li class="list-group-item"><a href=""> Inbox</a></li>
   <li class="list-group-item"><a href=""> Compose </a></li>
   <li class="list-group-item disabled" aria-disabled="true">Reports</li>
-  <li class="list-group-item"><a href=""> Order List</a></li>
-  <li class="list-group-item"><a href=""> Customer List</a></li>
-  <li class="list-group-item"><a href=""> Category List</a></li>
-  <li class="list-group-item"><a href=""> Item List</a></li>
-  <li class="list-group-item"><a href=""> News List</a></li>
-  <li class="list-group-item"><a href=""> Offer List</a></li>
+  <li class="list-group-item"><a href="orderList.php"> Order List</a></li>
+  <li class="list-group-item"><a href="customerList.php"> Customer List</a></li>
+  <li class="list-group-item"><a href="categoryList.php"> Category List</a></li>
+  <li class="list-group-item"><a href="itemList.php"> Item List</a></li>
+  <li class="list-group-item"><a href="newsList.php"> News List</a></li>
+  <li class="list-group-item"><a href="offerList.php"> Offer List</a></li>
 </ul>

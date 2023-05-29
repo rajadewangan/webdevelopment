@@ -33,6 +33,7 @@ require_once("dbconnect.php");
         echo("</div>");
 
     }
+    echo("</div>");
     echo ("<div id='itemContainer'>");
     $rsOffer=mysqli_query($con,"select * from offer_info where now()>=offer_start_date and now()<=offer_end_date");
     $arOffers=array();

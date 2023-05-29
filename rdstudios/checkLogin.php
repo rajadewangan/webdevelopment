@@ -14,7 +14,7 @@ else{
         $_SESSION['uname']=$a;
        if($User['user_type']=="user")
        {
-        header("location:index.php");
+        header("location:userChoice.php");
        }
        else if($User['user_type']=="admin")
        {
