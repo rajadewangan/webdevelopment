@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 29, 2023 at 03:13 AM
+-- Generation Time: May 30, 2023 at 09:14 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `cart_info` (
   `item_quantity` int(11) NOT NULL,
   `username` text NOT NULL,
   PRIMARY KEY (`cart_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `cart_info`
@@ -79,8 +79,19 @@ CREATE TABLE IF NOT EXISTS `complain_info` (
   `complain_subject` varchar(100) NOT NULL,
   `complain_descriptin` text NOT NULL,
   `complain_date` datetime NOT NULL,
+  `receiver_name` varchar(55) NOT NULL DEFAULT 'admin',
   PRIMARY KEY (`complain_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `complain_info`
+--
+
+INSERT INTO `complain_info` (`complain_id`, `user_name`, `complain_subject`, `complain_descriptin`, `complain_date`, `receiver_name`) VALUES
+(1, 'raja', 'movie', 'jhgjh', '2023-05-29 20:44:33', 'admin'),
+(2, 'r', 'website does not work properly', 'this website is not working properly i dont know why ???\r\nthis websi', '2023-05-30 19:58:00', 'admin'),
+(3, 'r', 'yes we reached you', 'we will solve your problem withing 3 days ', '2023-05-30 23:24:25', 'r'),
+(4, 'r', 'yes we reached you', 'we will work here', '2023-05-30 23:40:33', 'raja');
 
 -- --------------------------------------------------------
 
@@ -169,7 +180,7 @@ CREATE TABLE IF NOT EXISTS `order_detail` (
   `item_quantity` int(11) NOT NULL,
   `order_main_id` int(11) NOT NULL,
   PRIMARY KEY (`order_detail_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
 
 --
 -- Dumping data for table `order_detail`
@@ -177,7 +188,8 @@ CREATE TABLE IF NOT EXISTS `order_detail` (
 
 INSERT INTO `order_detail` (`order_detail_id`, `item_id`, `item_rate`, `item_quantity`, `order_main_id`) VALUES
 (14, 10, 44999.1, 1, 19),
-(15, 10, 44999.1, 1, 20);
+(15, 10, 44999.1, 1, 20),
+(16, 10, 39999.2, 2, 21);
 
 -- --------------------------------------------------------
 
@@ -194,20 +206,36 @@ CREATE TABLE IF NOT EXISTS `order_main` (
   `order_status` varchar(30) NOT NULL,
   `last_update_date` date NOT NULL,
   PRIMARY KEY (`order_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
 
 --
 -- Dumping data for table `order_main`
 --
 
 INSERT INTO `order_main` (`order_id`, `user_name`, `shipping_address`, `total_amount`, `order_date`, `order_status`, `last_update_date`) VALUES
-(14, 't', 'rd', 179996, '2023-05-25', 'Pending', '2023-05-25'),
+(14, 't', 'rd', 179996, '2023-05-25', 'Shipped', '2023-05-25'),
 (15, 't', 'shiv nagar', 179996, '2023-05-25', 'Pending', '2023-05-25'),
 (16, 't', 'shiv nagar', 179996, '2023-05-25', 'Pending', '2023-05-25'),
 (17, 't', 'shiv nagar', 179996, '2023-05-25', 'Pending', '2023-05-25'),
 (18, 't', 'shiv nagar', 179996, '2023-05-25', 'Pending', '2023-05-25'),
-(19, 't', 'shiv nagar', 44999.1, '2023-05-25', 'Pending', '2023-05-25'),
-(20, 't', 'shiv nagar', 44999.1, '2023-05-25', 'Pending', '2023-05-25');
+(19, 't', 'shiv nagar', 44999.1, '2023-05-25', 'Returned', '2023-05-25'),
+(20, 't', 'shiv nagar', 44999.1, '2023-05-25', 'Pending', '2023-05-25'),
+(21, 'raja', 'kumhari', 79998.4, '2023-05-31', 'Shipped', '2023-05-31');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `reply_info`
+--
+
+CREATE TABLE IF NOT EXISTS `reply_info` (
+  `reply_id` int(11) NOT NULL AUTO_INCREMENT,
+  `reply_subject` varchar(100) NOT NULL,
+  `reply_description` text NOT NULL,
+  `reply_date` datetime NOT NULL,
+  `complain_id` int(11) NOT NULL,
+  PRIMARY KEY (`reply_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
