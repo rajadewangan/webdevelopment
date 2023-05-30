@@ -12,6 +12,8 @@ else{
     if($User['user_pass']==$b)
     {
         $_SESSION['uname']=$a;
+        $_SESSION['user_type']=$User['user_type'];
+
        header("location:quantityFormForCart.php");
     }
     else{

@@ -29,10 +29,12 @@ include("header.php");
    }
   ?>
 <form method="get" action="insertComplain.php">
-<label>Enter Subject </label>
+<label>Complain To </label>
+<input type="text" name='txtTo' value='admin'>
+<label>Complain Heading </label>
 <input type="text" name='txtSubject'>
-<label>Enter Description</label>
-<textarea rows='5' name="txtDescription" ></textarea>
+<label>Complain Detail</label>
+<textarea rows='10' name="txtDescription"     height='5rem'></textarea>
 <div id='formButtons'>
 <input type="submit" value="Ok" />
 <input type="reset" value="Cancel" />

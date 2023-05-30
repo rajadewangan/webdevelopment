@@ -12,6 +12,7 @@ else{
     if($User['user_pass']==$b)
     {
         $_SESSION['uname']=$a;
+        $_SESSION['user_type']=$User['user_type'];
        if($User['user_type']=="user")
        {
         header("location:userChoice.php");

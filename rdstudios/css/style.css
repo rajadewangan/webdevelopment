@@ -206,7 +206,6 @@ form input{
 }#itemContainer{
     display: flex;
     background-color: yellow;
-    padding: 1.2rem;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -286,14 +285,15 @@ form input{
 }
 #newsDetails{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     text-align: end;
     justify-content: flex-end;
     background: cornsilk;
     border: 2px solid chocolate;
+    align-items: center;
 }
 #newsDetails div{
-    width: 39%;
+    width: 100%;
     text-align: right;
 }
 #newsDetails h1{
@@ -302,4 +302,27 @@ form input{
 #newsDetails p{
     font-size: 1.5rem;
     text-align: justify;
+}
+#newsDetails a{
+    text-align: center;
+    /* width: 100%; */
+    display: block;
+}
+#replyButton{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+}
+#replyButton a{
+
+    text-align: center;
+    color: white;
+    background-color: darkblue;
+    padding: 0.5rem;
+    text-decoration: none;
+    border-radius: 10px;
+    width: 10rem;
 }

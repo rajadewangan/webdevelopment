@@ -1,6 +1,6 @@
 <?php
-require_once("header.php");
 @session_start();
+require_once("header.php");
 ?>
 <div id="container" >
 <div id="userArea" class="row">
@@ -13,10 +13,10 @@ require_once("header.php");
 </div><!--end of leftUserArea-->
 
 <div id="rightUserArea">
-
-    <?php
+<?php
+     $usr = $_SESSION['uname'];
     require_once("dbconnect.php");
-    $sql = "SELECT * FROM `order_main` ORDER BY `order_date`DESC ";
+    $sql = "SELECT * FROM `order_main`  where `user_name`='$usr' ORDER BY `order_date`DESC";
     $rsNews = mysqli_query($con, $sql) or die("Query Error -1");
 
    
@@ -24,10 +24,11 @@ require_once("header.php");
     <table id="displayCartInfoTable">
         <tr>
             <th>S.No.</th>
-            <th>Customer Name</th>
             <th>Total Ammount</th>
             <th>Order Date</th>
+            <th>Status</th>
             <th>Details</th>
+
 
 
             
@@ -44,10 +45,11 @@ require_once("header.php");
             $cnt++;
             echo("<tr>");
             echo("<td>$cnt</td>");
-            echo("<td>{$row['user_name']}</td>");
             echo("<td>{$row['total_amount']}</td>");
             echo("<td>{$row['order_date']}</td>");
-            echo("<td><a href='orderDetails.php?$id'>Details</a></td>");
+            echo("<td>{$row['order_status']}</td>");
+            
+            echo("<td><a href='adminOrderDetails.php?order_id=$id'>Details</a></td>");
 
 
 
@@ -59,10 +61,12 @@ require_once("header.php");
        
         ?>
     </table>
-    
-</div><!--end of rightAdminArea-->
-</div><!--end of adminArea-->
-</div> <!--end of container-->
+
+</div><!--end of rightUserArea-->
+</div><!--end of userArea-->
+</div><!--end of container-->
+
+
 <?php
 require_once("footer.php");
 ?>

@@ -1,5 +1,5 @@
 <?php
-@session_satart();
+@session_start();
 require_once("header.php");
 ?>
 <div id="container" >
@@ -18,6 +18,7 @@ require_once("header.php");
     require_once("dbconnect.php");
     $sql = "SELECT ci.cart_id, ci.item_rate, ci.item_quantity, ii.item_name, ii.item_img
      FROM cart_info AS ci, item_info AS ii WHERE ci.item_id = ii.item_id  AND username = '$usr'";
+    //  echo($usr);
     $rsCart = mysqli_query($con, $sql) or die("Query Error -1");
    
 
@@ -34,10 +35,10 @@ require_once("header.php");
             <th>Status</th>
         </tr>
         <?php
-        $item_rate = $_SESSION['item_rate'];
         $cnt = 0;
         $total = 0;
         while ($row = mysqli_fetch_array($rsCart)) {
+            $item_rate = $row['item_rate'];
             $cnt++;
             echo("<tr>");
             echo("<td>$cnt</td>");

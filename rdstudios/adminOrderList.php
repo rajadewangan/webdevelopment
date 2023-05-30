@@ -1,18 +1,17 @@
 <?php
 require_once("header.php");
-@session_start();
 ?>
 <div id="container" >
-<div id="userArea" class="row">
-<div id="leftUserArea">
+<div id="adminArea" class="row">
+<div id="leftAdminArea">
 
     <?php
-     require_once("userMenu.php");
+     require_once("adminMenu.php");
     ?>
 
-</div><!--end of leftUserArea-->
+</div><!--end of leftAdminArea-->
 
-<div id="rightUserArea">
+<div id="rightAdminArea">
 
     <?php
     require_once("dbconnect.php");
@@ -27,7 +26,9 @@ require_once("header.php");
             <th>Customer Name</th>
             <th>Total Ammount</th>
             <th>Order Date</th>
+            <th>Status</th>
             <th>Details</th>
+
 
 
             
@@ -47,7 +48,9 @@ require_once("header.php");
             echo("<td>{$row['user_name']}</td>");
             echo("<td>{$row['total_amount']}</td>");
             echo("<td>{$row['order_date']}</td>");
-            echo("<td><a href='orderDetails.php?$id'>Details</a></td>");
+            echo("<td>{$row['order_status']}</td>");
+            
+            echo("<td><a href='adminOrderDetails.php?order_id=$id'>Details</a></td>");
 
 
 
@@ -60,9 +63,11 @@ require_once("header.php");
         ?>
     </table>
     
-</div><!--end of rightAdminArea-->
+    </div><!--end of rightAdminArea-->
 </div><!--end of adminArea-->
-</div> <!--end of container-->
+</div><!--end of container-->
+
+
 <?php
 require_once("footer.php");
-?>
+?>  
