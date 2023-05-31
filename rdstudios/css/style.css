@@ -16,10 +16,18 @@ body{
 }
 /* Header styling */
 #header{
-    height: 7rem;
+    height: 11rem;
     width: 90vw;
     display: flex;
     background-color: aliceblue;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+#header section{
+    display: flex;
+    height: 8rem;
 }
 #leftlogo{
 width: 25%;

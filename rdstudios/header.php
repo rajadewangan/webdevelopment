@@ -22,6 +22,7 @@
 <body>
     <div id="main" class="col">
         <div id="header">
+            <section>
             <div id="leftlogo">
             <a href="index.php"><img src="./Images/logo1.png" alt="Logo">  </a>
             </div><!--End of leftlogo-->
@@ -44,5 +45,11 @@
             <div id="rightlogo">
                 <img src="./Images/categories.png" alt="categories">
             </div> <!--End of rightlogo-->
+            </section>
+            <div id="searchBar">
+                <form method="get" action="searchResult.php">
+                    <input type="text" name="txtSearch" placeholder="Search anything here">
+            </form>
+            </div><!--end of searchBar-->
         </div> <!--End of header -->
     
