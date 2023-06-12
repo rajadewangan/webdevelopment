@@ -8,6 +8,6 @@
 <li class="list-group-item"><a href="complainForm.php"> Complain </a></li>
 <li class="list-group-item"><a href="orderList.php"> Order History</a></li>
 <li class="list-group-item"><a href="editProfile.php">Edit Profile</a></li>
-  <li class="list-group-item"><a href="orderList.php"> Logout</a></li>
+  <li class="list-group-item"><a href="logout.php"> Logout</a></li>
 
 </ul>

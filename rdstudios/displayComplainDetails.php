@@ -32,7 +32,7 @@ require_once("header.php");
     echo("<div id='replyButton'>");
     if($_SESSION['user_type']=='admin'){
     echo("<a href='replyForm.php?customer_name=$username&customer_id=$id'>Reply</a>");
-}
+    }
     else if($_SESSION['user_type']=='user')
     {
     echo("<a href='replyFormForCustomer.php?customer_name=$username&customer_id=$id'>Reply</a>");

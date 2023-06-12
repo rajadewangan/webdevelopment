@@ -18,7 +18,7 @@ require_once("header.php");
 
     <?php
     require_once("dbconnect.php");
-    $sql = "SELECT * FROM `news_info` WHERE news_publication_date>=now() ORDER BY DESC";
+    $sql = "SELECT * FROM `news_info` WHERE news_publication_date>=now() ORDER BY news_publication_date DESC";
     $rsNews = mysqli_query($con, $sql) or die("Query Error -1");
 
    

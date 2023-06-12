@@ -1,5 +1,5 @@
 <?php 
-$category_id = $_REQUEST['category_id'];
+$cat_id = $_REQUEST['category_id'];
 
 
 require_once("dbconnect.php");

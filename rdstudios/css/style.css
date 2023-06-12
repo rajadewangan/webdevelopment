@@ -186,6 +186,8 @@ form input{
     text-decoration: none;
 }
 #rightUserArea{
+    display: flex;
+    flex-direction: column;
     width: 75%;
 }
 #resmsg{

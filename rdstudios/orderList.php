@@ -15,8 +15,13 @@ require_once("header.php");
 <div id="rightUserArea">
 
     <?php
+    $usr=$_SESSION['uname'];
     require_once("dbconnect.php");
+    if($_SESSION['user_type']=="admin"){
     $sql = "SELECT * FROM `order_main` ORDER BY `order_date`DESC ";
+}
+else
+$sql = "SELECT * FROM `order_main` WHERE `user_name`='$usr' ORDER BY `order_date`DESC ";
     $rsNews = mysqli_query($con, $sql) or die("Query Error -1");
 
    
@@ -24,7 +29,7 @@ require_once("header.php");
     <table id="displayCartInfoTable">
         <tr>
             <th>S.No.</th>
-            <th>Customer Name</th>
+           <?php  if($_SESSION['user_type']=="admin"){ echo("<th>Customer Name</th>");}?>
             <th>Total Ammount</th>
             <th>Order Date</th>
             <th>Details</th>
@@ -44,10 +49,12 @@ require_once("header.php");
             $cnt++;
             echo("<tr>");
             echo("<td>$cnt</td>");
+            if($_SESSION['user_type']=="admin"){
             echo("<td>{$row['user_name']}</td>");
+            }
             echo("<td>{$row['total_amount']}</td>");
             echo("<td>{$row['order_date']}</td>");
-            echo("<td><a href='orderDetails.php?$id'>Details</a></td>");
+            echo("<td><a href='displayFinalOrder.php?odid=$id'>Details</a></td>");
 
 
 

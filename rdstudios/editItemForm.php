@@ -44,7 +44,7 @@ require_once("header.php");
 
   <label for="numDiscount">Enter Discount</label>
   <div class="input-group mb-3">
-      <input name="numDiscount" type="number" class="form-control" placeholder="Blank if you don't want to give discount" aria-label="Blank if you don't want to give discount" aria-describedby="basic-addon1" style="width:auto;">
+      <input name="numDiscount" type="number" value="<?=$row['item_name']?>" class="form-control" placeholder="Blank if you don't want to give discount" aria-label="Blank if you don't want to give discount" aria-describedby="basic-addon1" style="width:auto;">
       <span class="input-group-text" id="basic-addon1">%</span>
 </div>
 

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        function checkCourse() {
+            var course = document.getElementById("Course");
+            var xml = new XMLHttpRequest();
+            xml.onreadystatechange = function() {
+                if (xml.readyState == 4 && xml.status == 200) {
+                    course.innerHTML= xml.responseText;
+                }
+            };
+            xml.open("GET", "checkCourse.php", true);
+            xml.send();
+        }
+        function checkStudent() {
+            var course = document.getElementById("Course").value;
+            
+            var student = document.getElementById("Student");
+
+            var xml = new XMLHttpRequest();
+            xml.onreadystatechange = function() {
+                if (xml.readyState == 4 && xml.status == 200) {
+                    student.innerHTML= xml.responseText;
+                }
+            };
+            xml.open("GET", "checkStudent.php?cid="+course, true);
+            xml.send();
+        }
+    </script>
+</head>
+<body  onload="checkCourse();">
+    <div id="form-div">
+        <form action="insert.php" method="get">
+            <label for="cmbCourse">Select Course</label>
+            <select name="cmbCourse" id="Course" onclick="checkStudent();">
+                <option value="">select course</option>
+            </select>
+            <label for="cmbStudent" >Select Student</label>
+            <select name="cmbStudent" id="Student"></select>
+        </form>
+    </div>
+</body>
+</html>

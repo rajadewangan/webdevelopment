@@ -27,14 +27,7 @@ require_once("header.php");
             <th>Total Ammount</th>
             <th>Order Date</th>
             <th>Status</th>
-            <th>Details</th>
-
-
-
-            
-
-
-         
+            <th>Cancel Order</th>
 
 
         </tr>
@@ -48,9 +41,13 @@ require_once("header.php");
             echo("<td>{$row['total_amount']}</td>");
             echo("<td>{$row['order_date']}</td>");
             echo("<td>{$row['order_status']}</td>");
-            
-            echo("<td><a href='adminOrderDetails.php?order_id=$id'>Details</a></td>");
-
+            if($row['order_status']=="dispatche"||$row['order_status']=="pending"||$row['order_status']=="Shipped")
+            {
+            echo("<td><a href='cancelOrderByUser.php?order_id=$id'>Cancel</a></td>");
+        }
+        else
+        echo("<td><s>Cancel</s></td>");
+        
 
 
            

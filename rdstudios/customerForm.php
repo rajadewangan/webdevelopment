@@ -20,7 +20,7 @@ require_once("header.php");
     }
     ?>
 
-    <form method="get" action="insertCustomer.php">
+<form method="get" action="insertCustomer.php">
 <label>Enter your name</label>
 <input type="text" name="txtName" />
 <label>Enter your Email id</label>
