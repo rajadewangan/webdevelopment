@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function loadData()
+        {
+            var xml = new XMLHttpRequest();
+            xml.onreadystatechange = function ()
+            {
+                if(xml.readyState==4 && xml.status==200)
+                {
+                table = document.getElementById("table");
+                table.innerHTML = "<tr><td>Cat id</td><td>Cat name</td><td>Cat type</td></tr>";
+                var catData = xml.responseText;
+                var i = JSON.parse(catData);
+                var str = "";
+                for (const x in i) {
+                         str+="<tr>";
+                            str+="<td>"+i[x].cat_id+"</td><td>"+i[x].cat_name+"</td><td>"+i[x].cat_type+"</td>";
+                    }
+                table.innerHTML=str;
+                }
+                }
+            
+            xml.open("GET","category.php",true);
+            xml.send();
+        }
+    </script>
+</head>
+<body>
+    <section>
+        <div id="myDiv">
+            <button onclick="loadData();">Get Data</button>
+            <table border="1" id="table">
+
+            </table>
+        </div>
+    </section>
+</body>
+</html>
